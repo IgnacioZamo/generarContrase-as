@@ -20,6 +20,7 @@ const contraseña = document.createElement("h3");
 const form = document.createElement("form")
 const input = document.createElement("input");
 input.type="number";
+input.placeholder = "Tamaño de contraseña";
 const botonGenerar = document.createElement("button");
 botonGenerar.innerText="Generar!";
 form.appendChild(input);
