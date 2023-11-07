@@ -1,0 +1,85 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    height: 90vh;
+    width: 80vw;
+    background-image: url(./background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px black solid;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+#root{
+    display: grid;
+    grid-template-areas: 
+        "titulo titulo titulo"
+        "texto texto texto"
+        "form form form"
+        "pass pass pass";
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 65%;
+    width: 65%;
+    margin: auto;
+    padding: 5%;
+    border: black solid 1px;
+    background-color: rgba(240, 248, 255, 0.693);
+    min-height: 75%;
+}
+
+h1 {
+    grid-area: titulo;
+    border: 1px black solid;
+    text-align: center;
+    background-color: rgba(255, 230, 0, 0.768)
+}
+
+.instruccion {
+    grid-area: texto;
+    text-align: center;
+    text-decoration: solid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 125%;
+
+}
+
+.form{
+    grid-area: form;
+    align-items: center;
+    text-align: center;
+}
+
+.input{
+    padding: 2%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.boton{
+    margin: 50px;
+    padding: 2%;
+    font-size: large;
+    background-color: chartreuse;
+    border-radius: 25%;
+}
+
+.passGenerada{
+    grid-area: pass;
+    display: inline-block;
+    overflow: auto; /* Agregar desbordamiento vertical y horizontal */
+    font-size: 200%;
+    text-align: center;
+}
+
+

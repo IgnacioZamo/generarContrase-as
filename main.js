@@ -15,21 +15,27 @@ const titulo = document.createElement("h1");
 titulo.innerText = "Generador de contraseñas"
 const texto = document.createElement("p");
 texto.innerHTML = `Ingrese la cantidad de caracteres que de quiere. <b>Si no coloca nada, su contraseña será de 10 caracteres`;
-const contraseña = document.createElement("h3");
+texto.classList.add("instruccion")
+const contraseña = document.createElement("p");
+contraseña.classList.add("passGenerada");
 
 const form = document.createElement("form")
+form.classList.add("form")
 const input = document.createElement("input");
 input.type="number";
 input.placeholder = "Tamaño de contraseña";
+input.classList.add("input")
 const botonGenerar = document.createElement("button");
+botonGenerar.classList.add("boton");
 botonGenerar.innerText="Generar!";
 form.appendChild(input);
 form.appendChild(botonGenerar);
 
-botonGenerar.addEventListener("click", function () {
+botonGenerar.addEventListener("click", function (e) {
+    e.preventDefault()
     if (input.value == 0) { 
         const key = generadorPass();
-        contraseña.innerHTML= `Su contraseña generada es: ${key}`;
+        contraseña.innerHTML= `Su contraseña generada es: <b>${key}</b>`;
     }else {
         const key2 = generadorPass(input.value);
         contraseña.innerHTML = `Su contraseña generada de ${input.value} es <b>${key2}</b>`
